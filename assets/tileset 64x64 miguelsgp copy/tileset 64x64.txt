@@ -1,0 +1,11 @@
+2 Tilesets pixelart 64x64.
+
+Slop 2x1 and 1x1
+
+Wall to grass transition.
+
+​1 png with all tiles together for each of the two sets and 1 png per tile as well.
+
+No credit needed but it is appreciated link to https://miguelsgp.itch.io/
+
+You can do whatever with the sprites, personal or commercial. I would like that you tell me which sprites you use so I can upload better versions of them, so leave a comment, thanks!

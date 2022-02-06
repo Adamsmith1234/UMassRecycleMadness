@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/sfx_wpn_dagger.wav-664de44cb116595d94d4f3e4d04851c7.sample"
+
+[deps]
+
+source_file="res://assets/The Essential Retro Video Game Chubby Collection [512 sounds] By Juhani Junkala copy 2/Weapons/Melee/sfx_wpn_dagger.wav"
+dest_files=[ "res://.import/sfx_wpn_dagger.wav-664de44cb116595d94d4f3e4d04851c7.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

@@ -1,0 +1,103 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://Player.gd" type="Script" id=1]
+[ext_resource path="res://assets/SamAniSheet.png" type="Texture" id=2]
+[ext_resource path="res://assets/The Essential Retro Video Game Chubby Collection [512 sounds] By Juhani Junkala copy 2/Movement/Jumping and Landing/sfx_movement_jump1.wav" type="AudioStream" id=3]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 27.8802, 35.8181 )
+
+[sub_resource type="Animation" id=2]
+resource_name = "default"
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ 0, 7 ]
+}
+
+[sub_resource type="Animation" id=3]
+resource_name = "jump"
+length = 0.3
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.05, 0.1, 0.15 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2, 3 ]
+}
+
+[sub_resource type="Animation" id=4]
+resource_name = "jump_default"
+length = 0.05
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 3 ]
+}
+
+[sub_resource type="Animation" id=5]
+length = 0.3
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.05, 0.1, 0.15, 0.2, 0.25 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 1, 2, 3, 4, 5, 6 ]
+}
+
+[node name="Player" type="KinematicBody2D"]
+script = ExtResource( 1 )
+jump_velocity = -900
+speed = 500
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( -0.350923, -0.877346 )
+scale = Vector2( 0.616164, 0.675384 )
+texture = ExtResource( 2 )
+hframes = 8
+frame = 7
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 2.10559, 3.15842 )
+shape = SubResource( 1 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/default = SubResource( 2 )
+anims/jump = SubResource( 3 )
+anims/jump_default = SubResource( 4 )
+anims/run = SubResource( 5 )
+
+[node name="Timer" type="Timer" parent="."]
+
+[node name="jumpSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 3 )
+volume_db = -8.078
+
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_AnimationPlayer_animation_finished"]

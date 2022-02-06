@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/sfx_sounds_error2.wav-a3c987f0dc6e5013f26e216cfc199b90.sample"
+
+[deps]
+
+source_file="res://assets/The Essential Retro Video Game Chubby Collection [512 sounds] By Juhani Junkala copy 2/General Sounds/Negative Sounds/sfx_sounds_error2.wav"
+dest_files=[ "res://.import/sfx_sounds_error2.wav-a3c987f0dc6e5013f26e216cfc199b90.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

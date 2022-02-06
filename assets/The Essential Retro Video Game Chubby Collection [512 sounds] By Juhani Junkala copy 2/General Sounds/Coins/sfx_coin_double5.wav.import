@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/sfx_coin_double5.wav-1ed0ecc453502ad03bdba562b659e51d.sample"
+
+[deps]
+
+source_file="res://assets/The Essential Retro Video Game Chubby Collection [512 sounds] By Juhani Junkala copy 2/General Sounds/Coins/sfx_coin_double5.wav"
+dest_files=[ "res://.import/sfx_coin_double5.wav-1ed0ecc453502ad03bdba562b659e51d.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

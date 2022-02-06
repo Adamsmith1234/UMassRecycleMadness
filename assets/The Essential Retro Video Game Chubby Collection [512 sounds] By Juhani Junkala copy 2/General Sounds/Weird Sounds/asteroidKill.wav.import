@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/asteroidKill.wav-1709a02ada710774a22470cea5dfdb3c.sample"
+
+[deps]
+
+source_file="res://assets/The Essential Retro Video Game Chubby Collection [512 sounds] By Juhani Junkala copy 2/General Sounds/Weird Sounds/asteroidKill.wav"
+dest_files=[ "res://.import/asteroidKill.wav-1709a02ada710774a22470cea5dfdb3c.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

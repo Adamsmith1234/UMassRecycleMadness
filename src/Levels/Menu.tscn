@@ -1,0 +1,133 @@
+[gd_scene load_steps=13 format=2]
+
+[ext_resource path="res://src/Levels/snowLayer.gd" type="Script" id=1]
+[ext_resource path="res://assets/snowBackground.png" type="Texture" id=2]
+[ext_resource path="res://src/Levels/ParallaxLayer2.gd" type="Script" id=3]
+[ext_resource path="res://assets/levelOneBackGBigBuildings copy.png" type="Texture" id=4]
+[ext_resource path="res://assets/moutainLayerMenu.png" type="Texture" id=5]
+[ext_resource path="res://src/Levels/ParallaxLayer4.gd" type="Script" id=6]
+[ext_resource path="res://assets/TitleScreen(BlackEyes).png" type="Texture" id=7]
+[ext_resource path="res://assets/pixeboy-font copy/Pixeboy-z8XGD.ttf" type="DynamicFontData" id=8]
+[ext_resource path="res://src/Levels/Menu.gd" type="Script" id=9]
+[ext_resource path="res://assets/[OLD] Fullmetal Alchemist Brotherhood Opening 1 - Again 8-bit NES Remix.wav" type="AudioStream" id=10]
+[ext_resource path="res://assets/The Essential Retro Video Game Chubby Collection [512 sounds] By Juhani Junkala copy 2/General Sounds/Coins/sfx_coin_single1.wav" type="AudioStream" id=11]
+
+[sub_resource type="DynamicFont" id=1]
+size = 20
+font_data = ExtResource( 8 )
+
+[node name="Menu" type="Node2D"]
+script = ExtResource( 9 )
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="CanvasLayer"]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="CanvasLayer/ParallaxBackground"]
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer/ParallaxBackground/ParallaxLayer"]
+margin_left = -52.495
+margin_top = -38.1782
+margin_right = 1156.51
+margin_bottom = 654.822
+color = Color( 0.329412, 0.619608, 0.898039, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ParallaxLayer4" type="ParallaxLayer" parent="CanvasLayer/ParallaxBackground"]
+script = ExtResource( 6 )
+
+[node name="buildings" type="Sprite" parent="CanvasLayer/ParallaxBackground/ParallaxLayer4"]
+position = Vector2( 24.1119, 436.668 )
+texture = ExtResource( 5 )
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="CanvasLayer/ParallaxBackground"]
+script = ExtResource( 3 )
+
+[node name="buildings" type="Sprite" parent="CanvasLayer/ParallaxBackground/ParallaxLayer2"]
+position = Vector2( 24.1119, 411.243 )
+texture = ExtResource( 4 )
+
+[node name="ParallaxLayer3" type="ParallaxLayer" parent="CanvasLayer/ParallaxBackground"]
+motion_mirroring = Vector2( 2000, 700 )
+script = ExtResource( 1 )
+SNOW_SPEED = 50.0
+
+[node name="Sprite" type="Sprite" parent="CanvasLayer/ParallaxBackground/ParallaxLayer3"]
+position = Vector2( -198.783, 133.07 )
+scale = Vector2( 1.20043, 1.85427 )
+texture = ExtResource( 2 )
+
+[node name="Logo" type="Sprite" parent="CanvasLayer/ParallaxBackground"]
+position = Vector2( 492.613, 336.884 )
+texture = ExtResource( 7 )
+
+[node name="Label" type="Label" parent="CanvasLayer"]
+margin_left = 17.4798
+margin_top = 76.2755
+margin_right = 1655.48
+margin_bottom = 417.276
+custom_fonts/font = SubResource( 1 )
+text = "UMass is freezing over!
+
+Sam the Minuteman was on a stroll
+ when he noticed a storm knocked
+ debris all over the campus pond! 
+
+Luckily, Sam is a master in the 
+recycling arts and can turn 
+raw material into his 
+favorite UMass atractions! 
+His favorite library, 
+favorite dining hall,
+...even a statue of 
+his favorite chancellor!
+
+Can you navigate the thin ice,
+collecting debris and make it
+ to the end?
+
+How far are you willing to go to 
+save the environment???"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="CanvasLayer"]
+margin_left = 735.741
+margin_top = 77.8645
+margin_right = 2373.74
+margin_bottom = 418.865
+custom_fonts/font = SubResource( 1 )
+text = "Movement:
+WASD
+
+Select Build Object:
+1, 2, 3
+
+Build Object:
+Spacebar
+
+Recycle Material:
+Enter
+
+Tip: Don't fall on the ice
+it's too thin!
+
+Object's placed on the ice will only
+last a few seconds 
+before the ice shatters,
+so move quicky!"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="backMusic" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 10 )
+volume_db = -7.08
+pitch_scale = 1.06
+
+[node name="enterPressed" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 11 )
+volume_db = -4.039

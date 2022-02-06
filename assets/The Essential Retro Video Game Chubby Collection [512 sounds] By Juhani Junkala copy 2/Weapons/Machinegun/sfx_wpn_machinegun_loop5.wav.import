@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/sfx_wpn_machinegun_loop5.wav-e024d1813c8f1fcfc2e1ac3032b9c5fa.sample"
+
+[deps]
+
+source_file="res://assets/The Essential Retro Video Game Chubby Collection [512 sounds] By Juhani Junkala copy 2/Weapons/Machinegun/sfx_wpn_machinegun_loop5.wav"
+dest_files=[ "res://.import/sfx_wpn_machinegun_loop5.wav-e024d1813c8f1fcfc2e1ac3032b9c5fa.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0
